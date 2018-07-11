@@ -1,0 +1,20 @@
+<html ng-app="xyz">
+    <head>
+        <title>Day 2</title>
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-app="xyz" ng-init="fName=john">
+            {{fName}}
+            <input type="text" ng-model="fName" style="background-color:{{fName}}">
+            <p>The name is <span ng-bind="fName" style="background-color:{{fName}}" ></p>
+                <h2><span ng-bind="fName" style="background-color:{{fName}}"></h2>
+        </div>
+        <div ng-controller="ctrl">
+            {{obj.name}}<br>
+            {{obj.id}}<br>
+            {{obj.age}}
+        </div>
+    </body>
+</html>

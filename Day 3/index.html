@@ -1,0 +1,47 @@
+<html ng-app="abc">
+    <head>
+        <title>Day 3</title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <style>
+            table{
+                font-family: arial,sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+            }
+            td, th {
+    border: 1px solid;
+    text-align: left;
+    padding: 10px;
+}
+.even {
+    background-color: darkgreen;
+}
+.odd{
+    background-color: brown;
+}
+        </style>
+    </head>
+    
+    <body>
+            <h2>HTML TABLE</h2>
+
+<div ng-controller="ctrl1">
+<table>    
+        <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Place</th>
+            </tr>   
+        <tr ng-repeat="y in arr" ng-class="$index%2==0?'even':'odd'">
+                <td>{{y.name}}</td>
+                <td>{{y.age}}</td>
+                <td>{{y.place}}</td>
+        </tr>
+    </table>
+
+</div>
+
+
+</body>
+</html>
